@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function doSum(va,vb)
+			{
+				var sum=va+vb;
+				//alert(sum);//56
+				document.frm.txtSum.value=sum; //set
+				
+			}
+		function doMulti(va,vb)
+		{
+			
+			var multi=va*vb;
+			document.frm.txtMulti.value=multi;
+		}
+		function doClear()
+		{
+			document.frm.txtA.value="";
+			document.frm.txtB.value="";
+			document.frm.txtSum.value="";
+			document.frm.txtMulti.value="";
+			
+		}
+		function doCalc(task)
+		{
+			
+			var va=parseFloat(document.frm.txtA.value);//5 get
+			var vb=parseFloat(document.frm.txtB.value);//6 get
+			if(task=="sum")
+			doSum(va,vb);
+			else
+				if(task=="multi")
+					doMulti(va,vb);
+		}
+	</script>
+</head>
+
+<body>
+	<center>
+		<form name="frm">
+			<table >
+				<tr>
+
+					<td colspan="2" align="center">Calculator</td>
+				</tr>
+				<tr>
+					<td>Enter A</td>
+					<td>
+						<input type="text" name="txtA">
+					</td>
+				</tr>
+				<tr>
+					<td>Enter B</td>
+					<td>
+						<input type="number" name="txtB">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="button" value="Sum" onclick="doCalc('sum');">
+						<input type="button" value="Multiplication" onclick='doCalc("multi");'>
+						
+						<input type="button" value="Clear" onclick="doClear();">
+						<input type="reset" value="reset" >
+					</td>
+
+				</tr>
+				<tr>
+					<td>Sum</td>
+					<td>
+						<input type="text" name="txtSum" disabled>
+					</td>
+				</tr>
+				<tr>
+					<td>Multiplication</td>
+					<td>
+						<input type="text" name="txtMulti" readonly>
+					</td>
+				</tr>
+			</table>
+		</form>
+	</center>
+</body></html>
