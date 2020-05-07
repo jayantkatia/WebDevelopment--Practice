@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Report Card</title>
+</head>
+
+<body>
+    <h1>Report Card</h1>
+    <form name="frm">
+        <div>
+            <label for="name"> Name of the Student : </label>
+            <input name="name" type="text" required>
+        </div>
+        <div>
+            <label for="rollNo">Roll No.</label>
+            <input name="rollNo" type="number" min="1" max="60" step="1" required>
+        </div>
+        <div>
+            <label for="marksCpp">Marks in C++ </label>
+            <input type="number" name="marksCpp" min="0" max="100" required>
+        </div>
+        <div>
+            <label for="marksJava">Marks in Java </label>
+            <input type="number" name="marksJava" min="0" max="100" required>
+        </div>
+        <div> <label for="marksWeb">Marks in Web </label>
+            <input type="number" name="marksWeb" min="0" max="100" required>
+        </div>
+        <div>
+            <label for="marksApp">Marks in App </label>
+            <input type="number" name="marksApp" min="0" max="100" required>
+        </div>
+        <div>
+            <label for="marksIot">Marks in IoT</label>
+            <input type="number" name="marksIot" min="0" max="100" required>
+        </div>
+        <div class=".grid">
+            <input type="button" value="Total Marks" onclick="doCalc('sum');">
+            <input type="button" value="Grade" onclick="doCalc('grade');">
+            <input type="button" value="Percentage" onclick="doCalc('perc');">
+            <input type="reset" value="Reset">
+            <input type="button" value="Clear" onclick="doClear();">
+        </div>
+        <div class="result">
+            <label for="total">Total Marks:</label>
+            <input type="number" name="total" disabled>
+
+            <label for="grade">Grade:</label>
+            <input type="text" name="grade" readonly>
+
+            <label for="perc">Percentage:</label>
+            <input type="number" name="perc" readonly>
+        </div>
+
+    </form>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
