@@ -8,56 +8,46 @@
 
     <title>Report Card</title>
 </head>
-
 <body>
     <h1>Report Card</h1>
-    <form name="frm">
-        <div>
-            <label for="name"> Name of the Student : </label>
-            <input name="name" type="text" required>
-        </div>
-        <div>
-            <label for="rollNo">Roll No.</label>
-            <input name="rollNo" type="number" min="1" max="60" step="1" required>
-        </div>
-        <div>
-            <label for="marksCpp">Marks in C++ </label>
-            <input type="number" name="marksCpp" min="0" max="100" required>
-        </div>
-        <div>
-            <label for="marksJava">Marks in Java </label>
-            <input type="number" name="marksJava" min="0" max="100" required>
-        </div>
-        <div> <label for="marksWeb">Marks in Web </label>
-            <input type="number" name="marksWeb" min="0" max="100" required>
-        </div>
-        <div>
-            <label for="marksApp">Marks in App </label>
-            <input type="number" name="marksApp" min="0" max="100" required>
-        </div>
-        <div>
-            <label for="marksIot">Marks in IoT</label>
-            <input type="number" name="marksIot" min="0" max="100" required>
-        </div>
-        <div class=".grid">
-            <input type="button" value="Total Marks" onclick="doCalc('sum');">
-            <input type="button" value="Grade" onclick="doCalc('grade');">
-            <input type="button" value="Percentage" onclick="doCalc('perc');">
-            <input type="reset" value="Reset">
-            <input type="button" value="Clear" onclick="doClear();">
-        </div>
-        <div class="result">
-            <label for="total">Total Marks:</label>
-            <input type="number" name="total" disabled>
+    
+    <div>
+        <label for="rollNo">Roll No.</label>
+        <input id="rollNo" type="text" min="1" max="60" step="1" required autofocus >
+    </div>
+    <div>
+        <label for="marksCpp">Marks in C++ </label>
+        <input type="text" id="marksCpp" min="0" max="100" onblur="doCheck(this.id);"><span id="marksCppSpan">*</span>
+    </div>
+    <div>
+        <label for="marksJava">Marks in Java </label>
+        <input type="text" id="marksJava" min="0" max="100" onblur="doCheck(this.id);"><span id="marksJavaSpan">*</span>
+    </div>
+    <div> <label for="marksWeb">Marks in Web </label>
+        <input type="text" id="marksWeb" min="0" max="100" onblur="doCheck(this.id);"><span id="marksWebSpan">*</span>
+    </div>
+    <div> <label for="marksApp">Marks in App </label>
+        <input type="text" id="marksApp" min="0" max="100" onblur="doCheck(this.id);"><span id="marksAppSpan">*</span>
+    </div>
+   
+    <div >
+        <input type="button" value="Total Marks" onclick="doCalc('sum');">
+        <input type="button" value="Grade" onclick="doCalc('grade');">
+        <input type="button" value="Percentage" onclick="doCalc('perc');">
+        <input type="reset" value="Reset"><span>Reset button not working cause of form keyword missing</span>
+        <input type="button" value="Clear" onclick="doClear();">
+    </div>
+    <div class="result">
+        <label for="total">Total Marks:</label>
+        <input type="text" id="total" disabled>
 
-            <label for="grade">Grade:</label>
-            <input type="text" name="grade" readonly>
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade" disabled>
 
-            <label for="perc">Percentage:</label>
-            <input type="number" name="perc" readonly>
-        </div>
-
-    </form>
+        <label for="perc">Percentage:</label>
+        <input type="text" id="perc" disabled>
+    </div>
+    <input type="button" value="Check Pass" onclick="doCalc('pass');">
     <script src="js/main.js"></script>
 </body>
 

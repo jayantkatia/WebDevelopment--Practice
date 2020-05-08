@@ -7,10 +7,11 @@ label{
 }
 input{
     margin-left:3rem;
+    margin-right: 1rem;
     height:30px;
     width: 150px;
     font-size: large;
-    transition: box-shadow 500ms ease-in;
+    transition: box-shadow 200ms ease-in;
 }
 input:focus{
     box-shadow: 0px 0px 15px 5px grey;
