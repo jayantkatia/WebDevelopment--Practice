@@ -1,13 +1,14 @@
-//TODO    1. flag  2.solve many documentbyID prob
+//TODO    1.solve many documentbyID prob in doClear()
+//        2.confirm Security issue due to global obj containing marks
 //Globals ///////////////////////////////////////////////
 let obj = {
     identity: {},
     marks: {}
 };
 //To validate user input (marks out of 100) ///////////////
-function doCheck(id) {
-    let marks = Number(document.getElementById(id).value);
-    let spanReference = document.getElementById(id + "Span");
+function doCheck(id) {                                           //if onblur(this,marksCppSpan) then  doCheck(txtRef,spanRef)
+    let marks = Number(document.getElementById(id).value);       //this = document.getElementById();
+    let spanReference = document.getElementById(id + "Span");      //no need of taking marks and spanReference if done above thing
     let localFlag = true;  //local jasoos
     if (marks == "") {
         spanReference.innerHTML = `Pls fill ${id}`;
