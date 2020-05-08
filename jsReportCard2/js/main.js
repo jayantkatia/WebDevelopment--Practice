@@ -44,14 +44,12 @@ function doCalc(task) {
         switch (task) {
             case "sum":
                 document.getElementById("total").value = doSum();
-                document.getElementById("perc").disabled = false;
-                document.getElementById("perc").readOnly = true;
+                document.getElementById("btnPerc").disabled = false;
 
                 break;
             case "perc":
                 document.getElementById("perc").value = doPerc();
-                document.getElementById("grade").disabled = false;
-                document.getElementById("grade").readOnly=true;
+                document.getElementById("btnGrade").disabled = false;
                 break;
             case "grade":
                 document.getElementById("grade").value = doGrade();
