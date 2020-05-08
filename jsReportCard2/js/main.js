@@ -53,6 +53,8 @@ function doCalc(task) {
                 break;
             case "grade":
                 document.getElementById("grade").value = doGrade();
+                document.getElementById("btnPass").disabled = false;
+
                 break;
             case "pass":
                 doPass();
@@ -115,7 +117,8 @@ function doClear() {
     document.getElementById("total").value = "";
     document.getElementById("grade").value = "";
 
-    document.getElementById("grade").disabled = true;
-    document.getElementById("perc").disabled = true;
-    document.getElementById("total").disabled = true;
+    document.getElementById("btnGrade").disabled = true;
+    document.getElementById("btnPerc").disabled = true;
+    document.getElementById("btnPass").disabled = true;
+
 }
