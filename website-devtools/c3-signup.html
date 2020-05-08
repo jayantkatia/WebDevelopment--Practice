@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SignUp</title>
+</head>
+<body>
+    <form>
+        <table cellpadding="2" cellspacing="2">
+            <tr>
+                <td>Username</td>
+                <td>
+                    <input type="text" placeholder="Enter your username">                
+                </td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>
+                    <input type="password" placeholder="Enter your password" maxlength="15" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Enter your age</td>
+                <td><input type="number" min="13" max="30"></td>
+            </tr>
+            <tr>
+                <td>Enter your age (13-30)(range)</td>
+                <td>
+                    <input type="range" min="13" max="30">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter your college</td>
+                <td>
+                    <input list="college" >
+                    <datalist id="college">
+                        <option value="Thapar">
+                        </option>
+                        <option value="PEC">
+                        </option>
+                        <option value="IIT">
+                        </option>
+                        <option value="NIT">
+                        </option>
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>Choose your branch</td>
+                <td>
+                    <input type="radio" name="CSE" checked>Computers
+                    <input type="radio" name="ENC">Electronics
+                    <input type="radio" name="Mechanical">Mechanics
+                </td>
+            </tr>
+            <tr>
+                <td>Enter areas interested in</td>
+                <td>
+                    <input type="checkbox" name="Competitve Programming">Competitve Programming
+                    <input type="checkbox" name="Development">Development
+                    <input type="checkbox" name="DevOps">DevOps
+                    <input type="checkbox" name="Machine Learning">Machine Learning
+                    <input type="checkbox" name="IoT">IoT
+                    <input type="checkbox" name="Cybersecurity">CyberSecurity
+                </td>
+            </tr>
+            <tr>
+                <td>Enter Date of Birth</td>
+                <td>
+                    <input type="date">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter background Theme(personalisation of portal)</td>
+                <td>
+                    <input type="color">
+                </td>
+            </tr>
+            <tr>
+                <td>Enter features needed</td>
+                <td>
+                    
+                </td>
+            </tr>    
+            <tr>
+                <td>Upload Student ID card</td>
+                <td>
+                    <input type="file">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Enter your comments
+                </td>
+                <td height="100px">
+                    <textarea >
+                        Great !!
+                    </textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Sign up">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

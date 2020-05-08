@@ -1,0 +1,35 @@
+ body{
+     margin:0;
+ }
+ *{
+    box-sizing: border-box;
+ }
+ 
+ .buttons {
+     width: 100%;
+     border: 0;
+ }
+
+ .buttons td {
+     transform: rotate(10deg);
+ }
+
+ .qw:active {
+     transform: rotate(-20deg);
+ }
+
+ .buttons a {
+     padding: 0.75rem;
+     border-radius: 10px;
+     background-color: blue;
+     text-decoration: none;
+     color: white;
+     font-weight: bold;
+     transform: translate(-10px);
+ }
+
+ .buttons a:hover {
+     background-color: black;
+
+ }
+
