@@ -56,7 +56,7 @@ equal.onclick = equalFunc;
 function equalFunc() {
     let oper1, oper2, oper, index, result;
     for (let i = 0; i < operatorsRed.length; i++) {
-        let localIndex = screenString.indexOf(operatorsRed[i]);
+        let localIndex = screenString.lastIndexOf(operatorsRed[i]);
         if (localIndex != -1 && localIndex != 0) {
             index = localIndex;
             break;
