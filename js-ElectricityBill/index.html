@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electricity Bill</title>
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+
+<body>
+    <h1>Electricity Bill</h1>
+    <div>
+        <input type="number" name="units" id="units" min="0" onchange="doUnits(this);">
+        <span id="unitSpan">*</span>
+    </div>
+    <div>
+        <input type="checkbox" value="AC" id="AC" onchange="doCheck(this,ACnum)"><span>A.C.</span>
+        <input type="checkbox" value="Cooler" id="Cooler" onchange="doCheck(this,CoolerNum)"><span>Cooler</span>
+        <input type="checkbox" value="Fan" id="Fan" onchange="doCheck(this,FanNum)"><span>Fan</span>
+    </div>
+    <div>
+        <input type="number" id="ACnum" disabled min="0">
+        <input type="number" id="CoolerNum" disabled min="0">
+        <input type="number" id="FanNum" disabled min="0">
+    </div>
+    <div>
+        <input type="radio" name="type" value="domestic" id="residential" onclick="radDiscount()"><span>Residential (20% discount)</span>
+        <input type="radio" name="type" value="official" id="commercial" onclick="radDiscount()"><span>Commercial (10% discount)</span>
+        <span id="radSpan">*</span>
+    </div>
+    <div>
+        <input type="button"  onclick="doCalc('bill');" value="Bill">
+        <input type="button" id="btnDiscount" onclick="doCalc('discount');" value="Discount" disabled>
+        <input type="button" id="btnNet" onclick="doCalc('net');" value="Net" disabled>
+    </div>
+    <div id="display">
+
+    </div>
+</body>
+
+</html>
