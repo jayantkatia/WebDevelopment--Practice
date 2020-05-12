@@ -62,9 +62,10 @@ let net = 0, discount;
 
 function doBill() {
     let cost;
+    document.getElementById("display").innerHTML="";
     cost = obj.units * 5;
     appendInator("Units bill :  Rs " + cost);
-    net += cost;
+    net = cost;
 
     cost = obj.ACnum * 100;
     if (!isNaN(cost)) {
@@ -102,3 +103,4 @@ function appendInator(str) {
     let element = document.getElementById("display");
     element.appendChild(para);
 }
+//to autofocus   reference.focus();
