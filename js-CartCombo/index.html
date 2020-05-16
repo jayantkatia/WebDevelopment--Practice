@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Cart</title>
+</head>
+
+<body>
+    <label for="appliances">Select an item type:</label>
+    <select id="appliances" onchange="doFill(this)">
+        <option value="none">None</option>
+        <option value="Mobiles">Mobiles</option>
+        <option value="Laptops">Laptops</option>
+    </select>
+
+    <label for="ItemList">Item List</label>
+    <select id="ItemList"size=4 ondblclick="addToCart(this);">
+        <option value="none">None</option>
+    </select>
+    <label for="ItemPrice">Item price</label>
+    <select id="ItemPrice"size=4 disabled>
+        <option value="none">None</option>
+    </select>
+<div>
+    <h3>Cart</h3>
+    <select id="CartItems" size=4 >
+        <option value="none">None</option>
+    </select>
+    <select id="CartPrice"size=4>
+        <option value="none">None</option>
+    </select>
+</div>
+    <input type="button" value="Bill" onclick="doBill();">
+
+    <div id="display"></div>
+    
+</body>
+</html>
