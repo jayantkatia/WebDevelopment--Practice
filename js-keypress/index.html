@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*function chk()
+            {
+                //alert(event.keyCode);
+                if(	event.keyCode>=48 && event.keyCode<=57)
+                    {
+                        //alert(event.keyCode);
+                        //event.preventDefault();;;
+                        return false;
+                    }
+                
+            }*/
+            function getNonNumerics()
+            {
+                var kc=event.keyCode;//gives ASCII value
+                document.getElementById("spanKC").innerHTML=kc;
+                
+                //No numerics allowed
+                /*if(kc>=48 && kc<=57)
+                    return false;*/
+                
+                //Only Numerics are allowed
+                if(!(kc>=48 && kc<=57))
+                    return false;
+                
+            }
+        function a()
+            {
+                document.getElementById("spanKC").innerHTML="Mouse in";
+    
+            }
+            function b()
+            {
+                document.getElementById("spanKC").innerHTML="Mouse Out";
+    
+            }
+        </script>
+        
+            <input type="text" onkeypress="return getNonNumerics();">	
+            <span id="spanKC"></span>
+            
+            <input type="button" onmouseover="a();" onmouseout="b();" value="mouse-over">
+    
+</body>
+</html>
