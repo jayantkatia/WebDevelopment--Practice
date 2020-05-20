@@ -1,0 +1,77 @@
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+/* Main grid of tic  tac  toe */
+#container{
+    margin: 1rem auto;
+    display: grid;
+    grid-template: repeat(3,1fr)/repeat(3,1fr);
+    gap: 10px;
+    width: 400px;
+    height: 400px;
+    border: 0;
+    background-color:black;
+}
+.box{
+
+}
+#container div{
+    background-color: white;
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.cross{
+    background-image: url('../images/images.png');
+}
+.circle{
+    background-image: url('../images/index.png');
+}
+/* buttons bar */
+.button-bar{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.button-bar div{
+    width: 180px;
+    display: flex;
+    align-items: center;
+}
+#cross{
+    border-radius: 0%;
+}
+.button-bar button{
+    height:70px;
+    width: 70px;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 50%;
+    border: red 5px solid;
+    margin:1rem;
+    outline: none;
+}
+/* Result-bar */
+#result-bar{
+text-align: center;
+font-weight: bolder;
+font-size:x-large;
+color: darkgreen;
+}
+/* reset bar */
+.reset-bar{
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-evenly;
+}
+#clear , #reset{
+    cursor: pointer;
+    border: black 1px solid;
+}
+/* since width was hard coded 400px */
+@media only screen and (max-width:410px){
+    #container{
+        width: 90%;
+    }
+}
