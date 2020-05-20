@@ -1,17 +1,20 @@
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
 #container{
-    margin: 3rem auto;
+    margin: 1rem auto;
     display: inline-block;
     display: grid;
     grid-template: repeat(3,1fr)/repeat(3,1fr);
     gap: 10px;
-    height: 400px;
     width: 400px;
+    height: 400px;
     border: 0;
     background-color:black;
 }
-h1{
-    text-align: center;
-}
+
+/* buttons */
 .button-bar{
     margin: 0 auto;
     height: 100px;
@@ -26,7 +29,7 @@ h1{
 #cross{
     border-radius: 0%;
 }
-button{
+.button-bar button{
     height:70px;
     width: 70px;
     font-size: larger;
@@ -56,3 +59,21 @@ button{
     background-color: white;
 
 }
+/* Result-bar */
+#result-bar{
+text-align: center;
+font-weight: bolder;
+font-size:x-large;
+color: darkgreen;
+}
+/* reset bar */
+.reset-bar{
+    display: flex;
+    border: 1px solid black;
+    justify-content: space-evenly;
+}
+#reset{
+    cursor: pointer;
+    border: black 1px solid;
+}
+/* MediaQueries */
