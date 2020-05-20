@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-     crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link href="css/styles.css" type="text/css" rel="stylesheet" />
 
 </head>
@@ -15,20 +14,28 @@
 <body>
     <h1>TicTacToe</h1>
     <div id="container">
-        <div class="box row1 col1" id="1"></div>
-        <div class="box row1 col2" id="2"></div>
-        <div class="box row1 col3" id="3"></div>
-        <div class="box row2 col1" id="4"></div>
-        <div class="box row2 col2" id="5"></div>
-        <div class="box row2 col3" id="6"></div>
-        <div class="box row3 col1" id="7"></div>
-        <div class="box row3 col2" id="8"></div>
-        <div class="box row3 col3" id="9"></div>
+        <div class="box" id="1"></div>
+        <div class="box" id="2"></div>
+        <div class="box" id="3"></div>
+        <div class="box" id="4"></div>
+        <div class="box" id="5"></div>
+        <div class="box" id="6"></div>
+        <div class="box" id="7"></div>
+        <div class="box" id="8"></div>
+        <div class="box" id="9"></div>
     </div>
-    <br>
-    <div>
-        <button id="cross">cross</button>
-        <button id="circle">circle</button>
+    <div class="button-bar">
+        <div class="cross-btn">
+            <span>1P:</span>
+            <button id="cross">cross</button>
+        </div>
+        <div class="circle-btn">
+            <span>2P:</span>
+            <button id="circle">circle</button>
+        </div>
+    </div>
+    <div class="result-bar">
+            
     </div>
     <script src="js/jQuery3.5.1-production-compressed.js"></script>
     <script src="js/main.js"></script>

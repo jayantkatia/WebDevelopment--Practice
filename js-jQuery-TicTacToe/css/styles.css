@@ -1,29 +1,58 @@
 #container{
-    margin: 0 auto;
+    margin: 3rem auto;
+    display: inline-block;
     display: grid;
     grid-template: repeat(3,1fr)/repeat(3,1fr);
     gap: 10px;
     height: 400px;
     width: 400px;
     border: 0;
-
+    background-color:black;
 }
-div{
-    border: black solid 1px;
+h1{
     text-align: center;
 }
+.button-bar{
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.button-bar div{
+    width: 180px;
+    display: flex;
+    align-items: center;
+}
+#cross{
+    border-radius: 0%;
+}
+button{
+    height:70px;
+    width: 70px;
+    font-size: larger;
+    font-weight: bold;
+    border-radius: 50%;
+    border: red 5px solid;
+    margin:1rem;
+    outline: none;
+}
+
+/* used in jquery-js logic */
 .box{
-    background-color: blueviolet;
+    background-color:white;
 }
 .cross{
     background-image: url('../images/images.png');
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: white;
 }
 .circle{
     background-image: url('../images/index.png');
     background-size: 80%;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: white;
+
 }
