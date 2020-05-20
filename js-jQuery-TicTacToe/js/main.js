@@ -5,55 +5,69 @@ $(document).ready(function () {
          cross:0,
          circle:0,
      };
-     //check if winning or tie condition reached 
+     //3. check if winning or tie condition reached 
      function check(num) {
+         let flagHorizontal=false,flagVertical=false;
          switch (num) {
              case '1': case '2': case '3':
-                 checkCondition('1', '2', '3');
+                 flagHorizontal=checkCondition('1', '2', '3');
                  break;
              case '4': case '5': case '6':
-                 checkCondition('4', '5', '6');
+                 flagHorizontal=checkCondition('4', '5', '6');
                  break;
              case '7': case '8': case '9':
-                 checkCondition('7', '8', '9');
+                flagHorizontal=checkCondition('7', '8', '9');
                  break;
          }
-         switch (num) {
-             case '1': case '4': case '7':
-                 checkCondition('1', '4', '7');
-                 break;
-             case '2': case '5': case '8':
-                 checkCondition('2', '5', '8');
-                 break;
-             case '3': case '6': case '9':
-                 checkCondition('3', '6', '9');
-                 break;
+         if(!flagHorizontal){
+            switch (num) {
+                case '1': case '4': case '7':
+                    flagVertical=checkCondition('1', '4', '7');
+                    break;
+                case '2': case '5': case '8':
+                    flagVertical=checkCondition('2', '5', '8');
+                    break;
+                case '3': case '6': case '9':
+                    flagVertical=checkCondition('3', '6', '9');
+                    break;
+            }
+            if(!flagVertical){
+                switch (num) {
+                    case '1': case '9':
+                        checkCondition('1', '5', '9');
+                        break;
+                    case '3': case '7':
+                        checkCondition('3', '5', '7');
+                        break;
+                    case '5':
+                        checkConditionDiagonal('5', '1', '9', '3', '7');
+                        break;
+                }
+            }
+            
          }
-         switch (num) {
-             case '1': case '9':
-                 checkCondition('1', '5', '9');
-                 break;
-             case '3': case '7':
-                 checkCondition('3', '5', '7');
-                 break;
-             case '5':
-                 checkConditionDiagonal('5', '1', '9', '3', '7');
-                 break;
-         }
-         if (Object.keys(obj).length == 9)
-             result('tie');
      };
-     //check for horizontal and vertical
+     //4i  check for horizontal and vertical
      function checkCondition(a, b, c) {
          if (obj[a] == obj[b] && obj[a] == obj[c])
-             result(obj[a]);
+             {
+                 result(obj[a]);
+                 return true;
+             }
+        else if(Object.keys(obj).length == 9)
+             result('tie');
      }
-     //check for diagonal
+     //4ii  check for diagonal
      function checkConditionDiagonal(a, b, c, d, e) {
          if (obj[a] == obj[b] && obj[a] == obj[c] || obj[d] == obj[e] && obj[e] == obj[a])
-             result(obj[a]);
+            {
+                result(obj[a]);
+                return true;  
+            } 
+        else if(Object.keys(obj).length == 9)
+             result('tie');
      }
-     //Result display
+     //5 Result display
      function result(res) {
          let str;
          if (res == 'tie') {
@@ -90,26 +104,28 @@ $(document).ready(function () {
         }
         updateScore();
      });
-     //to make boxes have imgs and boxes unclickable after one time
+     //2.  to make boxes have imgs and boxes unclickable after one time
     let clickAble = function () {
         if ($(this).hasClass('box')){
             if (type == 'cross') {
                 $(this).addClass('cross');
                 $('#cross').hide();
                 $('#circle').show();
+                obj[this.id] = type;
             }
             else {
                 $(this).addClass('circle');
                 $('#circle').hide();
                 $('#cross').show();
+                obj[this.id] = type;
             }
         }
         $(this).removeClass('box');
         $('.box').unbind('click', clickAble);
-        obj[this.id] = type;
+        
         check(this.id);
     };
-    //to assign click function to divs
+    // 1.    command starts from here. to assign click function to divs
     $('button').click(function () {
         $(this).css('border', 'solid 5px green');
         if(this.id=='cross')
