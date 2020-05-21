@@ -1,0 +1,163 @@
+*{
+    box-sizing: border-box;
+}
+hr{
+    width: 70%;
+    text-align: center;
+    color: gray;
+}
+body{
+    margin: 0;
+    background-color: #ccf;
+}
+header{
+    position: fixed;
+    top:0;
+    padding:.5rem;
+    width: 100%;
+    background-color: white;
+}
+.logo{
+    display: inline-block;
+}
+.logo img{
+    max-height: 80px;
+}
+.nav{
+    float: right;
+    margin-right: 2rem  ;
+}
+.nav ul{
+    padding: 0; 
+    
+}
+.nav li{
+    display: inline-block;
+    margin-right: 2rem;
+    padding:0 1rem;
+    font-size: larger;
+}
+.nav a{
+    text-decoration: none;
+    font-weight: 900;
+    color: black;
+}
+/* banner */
+main{
+    margin-top:100px;
+}
+.banner{
+    text-align: center;
+}
+.banner h1{
+    text-shadow: 1px 2px gray;
+    word-spacing: .2rem;
+}
+.banner p{
+    font-size: x-large;
+    word-spacing: .2rem;
+}
+/* collection of images */
+.collection{
+    margin:2rem;
+    border-radius:10px;
+    background-color: rgba(255,255,255,0.6);
+    padding:1rem;
+}
+.collection img{
+    width:24.5%;
+    padding:0;
+    margin:0;
+}
+.collection a{
+    display: block;
+    padding:1rem;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    font-size: large;
+}
+/* Reviews */
+.review{
+    text-align: center;
+}
+.review h2{
+    font-size: 2rem;
+    text-shadow:1px 2px gray;
+}
+.review>p{
+    font-size: x-large;
+    word-spacing: .2rem;
+}
+/* review --> review-cardsss */
+.card{
+    padding: 1rem;
+    overflow: hidden;
+    max-height: 400px;
+    width:30%;
+    background-color: rgba(255,255,255,0.6);
+    display: inline-block;
+    margin:1rem;
+}
+.card>p{
+    padding:1rem;
+    font-size: larger;
+    border-left:.4rem solid gray;
+}
+.review-person p{
+    display: inline-block;
+    position: relative;
+    bottom: 50px;
+    font-size: larger;
+}
+.review-person span{
+    color: red;
+    font-weight: bold;
+}
+.card img{
+    width:100px;
+    border-radius: 50%;
+}
+/* footer */
+footer{
+    background-color: #fff;
+    padding:2rem;
+    padding-bottom: 1rem;
+}
+.footer-card{
+    width:30%;
+    display: inline-block;
+    margin:1rem;
+    padding: 0 1rem;
+    font-size: large;
+    vertical-align: top;
+}
+footer hr{
+    margin-top: 2rem;
+}
+
+footer a{
+    text-decoration: none;
+    font-size: large;
+    color: black;
+    
+}
+footer li{
+    width:50%;
+    list-style: none;
+    padding: .5rem;
+    border-bottom: 1px solid gray;
+}
+footer ul{
+    padding-left: 0;
+}
+.fcard3 li{
+    border:0;
+}
+.fcard3 i{
+    margin-right: 0.5rem;
+}
+.flist-last{
+    border:0;
+    
+}

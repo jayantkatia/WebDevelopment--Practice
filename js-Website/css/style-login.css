@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0;
+    background-color:#b1b1e3;
+}
+h1{
+    margin: 0;
+}
+
+.container{
+    background-color:rgba(255,255,255,0.7);
+    width:30%;  
+    min-height: 400px;
+    margin: auto;
+    margin-top: 7%;
+    border-radius: 20px;
+    box-shadow:0px 0px 10px 2px grey;
+    padding: 2rem;
+}
+.container:hover{
+    box-shadow: 0px 0px 15px 8px grey ;
+}
+.container>a{
+    float: right;
+}
+.image{
+    width:100px;
+    margin: 0 auto;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-image: url("../res/images/pirate.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.field{
+    height:120px;
+}
+.field label{
+    font-size: larger;
+    font-weight: bold;
+
+}
+.field input{
+    display: block;
+    margin:0.8rem auto;
+    padding:0.5rem;
+    width: 65%;
+    border-radius: 10px;
+    border:1px solid black;
+    transition: width 400ms 200ms ease-in;
+    outline: none;
+    cursor: pointer;
+    text-align: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-x: 10px;
+}
+.field input:focus{
+    width: 80%;
+}
+.field input[type="text"]{
+    background-image: url("../res/images/pirate.png");
+    
+    
+}
+.field input[type="password"]{
+    background-image: url("../res/images/pirate-ship.jfif");
+}
+.field input[type="number"]{
+    background-image: url("../res/images/pirate-map.png");
+}
+.btn{
+    text-align: center;
+    margin-top:1.5rem;
+}
+.btn input{
+    min-height:40px;
+    min-width: 100px;
+    border: 1px black solid;
+    border-radius: 5px;
+    outline: none;
+    font-size: large;
+}
+.btn input:hover{
+    cursor: pointer;
+    font-weight: bold;
+
+}
+.btn input:active{
+    transform: translate(5px,5px);
+    
+}
+
+.back{
+    position: absolute;
+    top: 2rem;
+    left:2rem;
+}
+/* JQUERY------------------- */
+.green{
+    color:green;
+}
+.red{
+    color:red;
+}
+#eye-btn{
+    border: 0.5px black solid;
+    margin-left: 10px;
+    padding: 2px;
+    float: right;
+}
