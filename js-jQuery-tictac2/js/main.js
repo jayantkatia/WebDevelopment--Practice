@@ -8,9 +8,9 @@ $(document).ready(function () {
     type = 'cross';
     //1.  to make boxes have imgs and boxes unclickable after one time
     $('#container div').click(function () {
-        alert("1");
+       
         if ($(this).hasClass('box')) {
-            alert("2");
+            
             if (type == 'cross') {
                 $(this).addClass('cross');
                 obj[this.id] = type;
@@ -23,7 +23,7 @@ $(document).ready(function () {
             }
             check(this.id);
             $(this).removeClass('box');
-            alert("4");
+          
         }
     });
     //2. check if winning or tie condition reached 
