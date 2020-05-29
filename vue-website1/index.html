@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WebApp</title>
-    <link rel="stylesheet" href="css/style.css" type="text/css"/>
-    <script src="https://cdn.jsdelivr.net/npm/vue" defer></script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
     <script src="js/main.js" defer></script>
 </head>
+
 <body>
-    
+    <div id="app">
+        <h1>{{ heading }}</h1>
 
-
+        <div class="inp">
+            <!-- <form @reset="resetForm" v-on:submit="submitForm"> -->
+            <form @reset="resetForm">
+                <label for="username" >Enter your name</label>
+                <input type="text" v-model="username"><br><br>
+                <label for="title">Enter your Task Heading</label>
+                <textarea name="title_of_task" v-model="title" placeholder="Enter Something..." id="title" cols="30" rows="1">
+                </textarea>
+                <label for="details">Enter details:</label>
+                <textarea name="details" id="details" cols="30" v-model="details" rows="10"></textarea>
+                <br>
+                <label for="deadline">Enter deadline:</label>
+                <input type="date" name="deadline" v-model="deadline" id="deadline">
+                <br>
+                <label for="type">Enter task type</label>
+                <input type="text" name="type" id="type">   
+                
+                <input type="submit" value="Add Task" v-on:click.prevent="submitForm" >
+            </form>
+        </div>
+        <h1>{{title}}:{{details}}:{{deadline}}</h1>
+    </div>
 </body>
+
 </html>
