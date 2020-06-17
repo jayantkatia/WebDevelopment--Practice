@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Uploader</title>
+    <script>
+        function showpreview(file) {
+console.log('hello');
+if (file.files && file.files[0])
+ {
+    var reader = new FileReader();
+    reader.onload = function (ev) {
+        console.log('hello');
+        document.getElementById('prev').src=ev.target.result;
+        //$('#prev').attr('src', ev.target.result);
+    }
+    reader.readAsDataURL(file.files[0]);
+}
+
+}
+
+    </script>
+</head>
+
+<body>
+    <form action="./service.php" enctype="multipart/form-data" method="post">
+        <div>
+            <input type="file" name="profile"  id="pics" onchange="showpreview(this)">
+        </div>
+        <div><img id="prev" src="" alt="" height="300px"></div>
+        <div>
+            <label for="name">Enter your name : </label>
+            <input type="text" value="Jayant" name="name" id="name" required>
+        </div>
+        <div>
+            <label for="age">Age:</label>
+            <input type="number" name="age" value="19" id="age" min="0" max="100" required>
+        </div>
+        <div>
+            <label for="gender">To which gender identity do you most identify? </label>
+            <select name="gender" id="gender" required>
+                <option value="male" selected>Male</option>
+                <option value="female">Female</option>
+                <option value="no prefernce">Prefer not to say</option>
+            </select>
+        </div>
+        <div>
+            <label for="city">City</label>
+            <input list="cities" name="city" value="Bathinda" id="city" required>
+            <datalist id="cities">
+                <option value="Bathinda">Bathinda</option>
+                <option value="Patiala">Patiala</option>
+                <option value="Chandigarh">Chandigarh</option>
+                <option value="Ludhiana">Ludhiana</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Hyderabad">Hyderabad</option>
+            </datalist>
+        </div>
+        <div>
+            <label>Skills</label>
+            <input type="checkbox" name="CPP" id="" value="7" checked required>CPP
+            <input type="checkbox" name="WebD" id="" value="6" >WebD
+            <input type="checkbox" name="Java" value="10" id="">Java
+            <input type="checkbox" name="Cyber" id="" value="9">Cyber
+            <input type="checkbox" name="Linux" id="" value="6">Linux
+            <input type="checkbox" name="App" value="8" id="">AppD
+        </div>
+        <div>
+            <label for="tech">Technologies interested in :</label>
+            <select name="tech[]" size="5" id="tech" multiple required>
+                <option value="MERN" selected>MERN</option>
+                <option value="MEAN">MEAN</option>
+                <option value="LAMP">LAMP</option>
+                <option value="MEVN">MEVN</option>
+                <option value="Serverless">Serverless Stack</option>
+            </select>
+        </div>
+        <div>
+            <input type="submit" value="Upload">
+        </div>
+    </form>
+</body>
+
+</html>

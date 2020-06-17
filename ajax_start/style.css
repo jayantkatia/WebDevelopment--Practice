@@ -1,0 +1,13 @@
+.red{
+    border-color: red;
+}
+.green{
+    border-color: green;
+}
+#emailHelp{
+    display: inline-block;
+}
+#wait{
+    display: none;
+    width: 40px;
+}

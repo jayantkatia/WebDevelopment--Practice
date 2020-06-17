@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        div{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cart</h1>
+    <form action="./service.php" method="post">
+        <div>
+            <label for="name">Enter your name :</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+            <input type="checkbox" name="book" value="500">Books
+            <input type="checkbox" name="smartphone" value="5000">Smartphone
+            <input type="checkbox" name="laptop" value="50000">Laptop
+        </div>
+        <div>
+            <input type="radio" name="discount" value="10" required>Basic Member
+            <input type="radio" name="discount" value="20">VIP Member
+        </div>
+        <div>
+            <label for="coupon">Enter coupon code if any:</label>
+            <input type="text" name="coupon" id="coupon"></div>
+        <div>
+            <input type="submit" value="Bill">
+        </div>
+    </form>
+</body>
+
+</html>
